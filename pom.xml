@@ -22,7 +22,7 @@
 		<developer/>
 	</developers>
 	<modules>
-		<module>pc-configurator</module>
+		<module>configurator-service</module>
 	</modules>
 	<scm>
 		<connection/>
