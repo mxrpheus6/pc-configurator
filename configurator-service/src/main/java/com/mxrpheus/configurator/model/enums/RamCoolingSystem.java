@@ -1,6 +1,6 @@
 package com.mxrpheus.configurator.model.enums;
 
-public enum GpuCoolingSystem {
-    ACTIVE,
+public enum RamCoolingSystem {
+    NONE,
     PASSIVE
 }
