@@ -1,4 +1,4 @@
-package com.mxrpheus.configurator.model;
+package com.mxrpheus.configurator.model.component;
 
 import com.mxrpheus.configurator.model.enums.ComponentType;
 

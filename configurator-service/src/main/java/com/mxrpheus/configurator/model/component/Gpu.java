@@ -1,7 +1,7 @@
-package com.mxrpheus.configurator.model;
+package com.mxrpheus.configurator.model.component;
 
-import com.mxrpheus.configurator.model.enums.GpuCoolingSystem;
-import com.mxrpheus.configurator.model.enums.GpuDeliveryType;
+import com.mxrpheus.configurator.model.reference.GpuCoolingSystem;
+import com.mxrpheus.configurator.model.reference.GpuDeliveryType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

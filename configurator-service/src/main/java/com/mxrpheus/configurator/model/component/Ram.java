@@ -1,7 +1,7 @@
-package com.mxrpheus.configurator.model;
+package com.mxrpheus.configurator.model.component;
 
-import com.mxrpheus.configurator.model.enums.RamCoolingSystem;
-import com.mxrpheus.configurator.model.enums.RamFeatures;
+import com.mxrpheus.configurator.model.reference.RamCoolingSystem;
+import com.mxrpheus.configurator.model.reference.RamFeature;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ public class Ram extends Component {
     private Integer throughputMB;
     private Integer CL;
     private RamCoolingSystem coolingSystem;
-    private List<RamFeatures> features;
+    private List<RamFeature> features;
 }

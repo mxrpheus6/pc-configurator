@@ -1,6 +1,6 @@
-package com.mxrpheus.configurator.model;
+package com.mxrpheus.configurator.model.component;
 
-import com.mxrpheus.configurator.model.enums.CpuDeliveryType;
+import com.mxrpheus.configurator.model.reference.CpuDeliveryType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
