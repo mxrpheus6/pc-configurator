@@ -20,7 +20,7 @@ public class Gpu extends Component {
     private Integer nodeNm;
     private Integer coreClockSpeedMHz;
     private Integer memoryClockSpeedMHz;
-    private Integer memoryGb;
+    private Integer memoryGB;
     private String memoryType;
     private Integer memoryBusWidth;
     private String powerConnector;
