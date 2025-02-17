@@ -1,7 +1,7 @@
 package com.mxrpheus.configurator.model.component;
 
-import com.mxrpheus.configurator.model.reference.RamCoolingSystem;
-import com.mxrpheus.configurator.model.reference.RamFeature;
+import com.mxrpheus.configurator.model.reference.ram.RamCoolingSystem;
+import com.mxrpheus.configurator.model.reference.ram.RamFeature;
 
 import java.util.List;
 

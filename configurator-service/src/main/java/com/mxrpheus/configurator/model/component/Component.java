@@ -20,7 +20,6 @@ public abstract class Component {
     @Column(nullable = false)
     private String brand;
 
-
     private String brandWebsite;
 
     @Column(nullable = false)

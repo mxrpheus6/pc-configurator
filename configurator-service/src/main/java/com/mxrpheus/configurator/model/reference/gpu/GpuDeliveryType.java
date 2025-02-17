@@ -1,4 +1,4 @@
-package com.mxrpheus.configurator.model.reference;
+package com.mxrpheus.configurator.model.reference.gpu;
 
 public class GpuDeliveryType {
     private Long id;
