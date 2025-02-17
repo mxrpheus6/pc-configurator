@@ -1,7 +1,5 @@
 package com.mxrpheus.configurator.model.component;
 
-import com.mxrpheus.configurator.model.enums.ComponentType;
-
 import java.math.BigDecimal;
 
 public abstract class Component {
@@ -11,5 +9,4 @@ public abstract class Component {
     private String brandWebsite;
     private String name;
     private BigDecimal price;
-    private ComponentType type;
 }
