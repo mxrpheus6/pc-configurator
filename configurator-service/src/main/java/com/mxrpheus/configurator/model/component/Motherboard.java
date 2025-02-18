@@ -51,7 +51,7 @@ public class Motherboard extends Component {
     private List<MotherboardExpansionSlotReference> expansionSlots;
 
     @ManyToOne
-    @JoinColumn(name = "integratedGraphics_id", nullable = false)
+    @JoinColumn(name = "integrated_graphics_id", nullable = false)
     private MotherboardIntegratedGraphicsReference integratedGraphics;
 
     @ManyToMany
@@ -65,8 +65,8 @@ public class Motherboard extends Component {
     @ManyToMany
     @JoinTable(
             name = "motherboard_back_port_mapping",
-            joinColumns = @JoinColumn(name = "back_port_id"),
-            inverseJoinColumns = @JoinColumn(name = "network_interface_id")
+            joinColumns = @JoinColumn(name = "motherboard_id"),
+            inverseJoinColumns = @JoinColumn(name = "back_port_id")
     )
     private List<MotherboardBackPortReference> backPorts;
 
