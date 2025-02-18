@@ -20,7 +20,7 @@ public class MotherboardMemoryTypeServiceImpl implements MotherboardMemoryTypeSe
         if (name == null) {
             return memoryTypeRepository.findAll();
         } else {
-            return memoryTypeRepository.findByNameContaining(name);
+            return memoryTypeRepository.findByNameContainingIgnoreCase(name);
         }
     }
 
