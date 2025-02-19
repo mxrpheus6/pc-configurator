@@ -1,7 +1,7 @@
-package com.mxrpheus.configurator.controller;
+package com.mxrpheus.configurator.controller.reference.motherboard;
 
 import com.mxrpheus.configurator.model.reference.motherboard.MotherboardMemoryTypeReference;
-import com.mxrpheus.configurator.service.motherboard.MotherboardMemoryTypeService;
+import com.mxrpheus.configurator.service.reference.impl.motherboard.MotherboardMemoryTypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
