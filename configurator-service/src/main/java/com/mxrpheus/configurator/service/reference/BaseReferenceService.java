@@ -7,4 +7,6 @@ import java.util.List;
 public interface BaseReferenceService<T extends BaseReferenceEntity> {
     List<T> findAllFiltered(String name);
     T findById(Long id);
+    T save(T entity);
+    void delete(Long id);
 }

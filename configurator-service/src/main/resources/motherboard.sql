@@ -97,3 +97,5 @@ VALUES (4, 1, 4, 4, 2, 4, 4, 1, 'GH44556', 'ASRock', 'https://www.asrock.com', '
 
 INSERT INTO motherboard (id, form_factor_id, socket_id, chipset_id, memory_type_id, memory_slot_count_id, integrated_graphics_id, power_phase_id, article_number, brand, brand_website, name, price)
 VALUES (5, 2, 2, 2, 1, 2, 5, 2, 'IJ78901', 'MSI', 'https://www.msi.com', 'MSI B450M PRO-VDH MAX', 109.99);
+
+SELECT setval('motherboard_memory_type_reference_id_seq', (SELECT MAX(id) FROM motherboard_memory_type_reference));

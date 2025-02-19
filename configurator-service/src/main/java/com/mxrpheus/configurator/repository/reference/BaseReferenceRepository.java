@@ -9,4 +9,5 @@ import java.util.List;
 @NoRepositoryBean
 public interface BaseReferenceRepository<T extends BaseReferenceEntity> extends JpaRepository<T, Long> {
     List<T> findByNameContainingIgnoreCase(String name);
+    boolean existsByNameIgnoreCase(String name);
 }

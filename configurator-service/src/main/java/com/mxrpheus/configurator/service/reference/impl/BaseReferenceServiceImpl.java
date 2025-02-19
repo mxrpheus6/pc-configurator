@@ -1,5 +1,6 @@
 package com.mxrpheus.configurator.service.reference.impl;
 
+import com.mxrpheus.configurator.exception.EntityAlreadyExistsException;
 import com.mxrpheus.configurator.exception.EntityNotFoundException;
 import com.mxrpheus.configurator.model.reference.BaseReferenceEntity;
 import com.mxrpheus.configurator.repository.reference.BaseReferenceRepository;
@@ -32,5 +33,22 @@ public abstract class BaseReferenceServiceImpl<T extends BaseReferenceEntity, R 
     @Override
     public T findById(Long id) {
         return repository.findById(id).orElseThrow(() -> new EntityNotFoundException(entityClass, id));
+    }
+
+    @Override
+    public T save(T entity) {
+        if (repository.existsByNameIgnoreCase(entity.getName())) {
+            throw new EntityAlreadyExistsException(entityClass, entity.getName());
+        }
+
+        entity.setCount(0);
+        return repository.save(entity);
+    }
+
+    @Override
+    public void delete(Long id) {
+        T entity = repository.findById(id).orElseThrow(() -> new EntityNotFoundException(entityClass, id));
+
+        repository.delete(entity);
     }
 }
