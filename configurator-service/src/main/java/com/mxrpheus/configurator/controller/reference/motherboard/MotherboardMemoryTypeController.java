@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/motherboard-memory-types")
-public class MotherboardMemoryTypeController extends BaseReferenceController<MotherboardMemoryTypeReference> {
+public class MotherboardMemoryTypeController
+        extends BaseReferenceController<MotherboardMemoryTypeReference> {
     public MotherboardMemoryTypeController(MotherboardMemoryTypeService service) {
         super(service);
     }
