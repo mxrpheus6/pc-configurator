@@ -17,10 +17,6 @@ import java.util.List;
 @Entity
 @Table(name = "motherboard_network_interface_reference")
 public class MotherboardNetworkInterfaceReference extends BaseReferenceEntity {
-
-    @ManyToMany(mappedBy = "networkInterfaces")
-    private List<Motherboard> motherboards;
-
     public MotherboardNetworkInterfaceReference(String name) {
         super(name);
     }

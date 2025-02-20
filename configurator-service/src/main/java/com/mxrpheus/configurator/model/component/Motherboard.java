@@ -1,11 +1,13 @@
 package com.mxrpheus.configurator.model.component;
 
 import com.mxrpheus.configurator.model.reference.motherboard.*;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 import java.util.List;
@@ -34,41 +36,21 @@ public class Motherboard extends Component {
     @JoinColumn(name = "memory_slot_count_id", nullable = false)
     private MotherboardMemorySlotCountReference memorySlotsCount;
 
-    @ManyToMany
-    @JoinTable(
-            name = "motherboard_sata_controller_mapping",
-            joinColumns = @JoinColumn(name = "motherboard_id"),
-            inverseJoinColumns = @JoinColumn(name = "sata_controller_id")
-    )
-    private List<MotherboardSataControllerReference> sataControllers;
+    @OneToMany(mappedBy = "motherboard", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MotherboardSataControllerMapping> sataControllers;
 
-    @ManyToMany
-    @JoinTable(
-            name = "motherboard_expansion_slot_mapping",
-            joinColumns = @JoinColumn(name = "motherboard_id"),
-            inverseJoinColumns = @JoinColumn(name = "expansion_slot_id")
-    )
-    private List<MotherboardExpansionSlotReference> expansionSlots;
+    @OneToMany(mappedBy = "motherboard", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MotherboardExpansionSlotMapping> expansionSlots;
 
     @ManyToOne
     @JoinColumn(name = "integrated_graphics_id", nullable = false)
     private MotherboardIntegratedGraphicsReference integratedGraphics;
 
-    @ManyToMany
-    @JoinTable(
-            name = "motherboard_network_interface_mapping",
-            joinColumns = @JoinColumn(name = "motherboard_id"),
-            inverseJoinColumns = @JoinColumn(name = "network_interface_id")
-    )
-    private List<MotherboardNetworkInterfaceReference> networkInterfaces;
+    @OneToMany(mappedBy = "motherboard", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MotherboardNetworkInterfaceMapping> networkInterfaces;
 
-    @ManyToMany
-    @JoinTable(
-            name = "motherboard_back_port_mapping",
-            joinColumns = @JoinColumn(name = "motherboard_id"),
-            inverseJoinColumns = @JoinColumn(name = "back_port_id")
-    )
-    private List<MotherboardBackPortReference> backPorts;
+    @OneToMany(mappedBy = "motherboard", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<MotherboardBackPortMapping> backPorts;
 
     @ManyToMany
     @JoinTable(
